@@ -1,0 +1,55 @@
+Task 22
+
+# Add Atributes to the circle elements
+
+We appended the circle in the last challenge but SVG needs more information to display circles correctly on the screen.
+
+
+ The " circle " element in SVG accepts three main attributes namely 'cx', 'cy' which decide the co-ordinate position on the circle and 'r' attribute decides the size of the circle.
+
+All these three attributes uses the callback function to set the values dynamically.
+
+Remember that all methods chained after data(dataset) run once per item in dataset. The d parameter in the callback function refers to the current item in dataset, which is an array for each point. You use bracket notation, like d[0], to access the values in that array.
+
+
+CHALLENGE SOLUTION:
+
+<body>
+  <script>
+    const dataset = [
+                  [ 34,    78 ],
+                  [ 109,   280 ],
+                  [ 310,   120 ],
+                  [ 79,    411 ],
+                  [ 420,   220 ],
+                  [ 233,   145 ],
+                  [ 333,   96 ],
+                  [ 222,   333 ],
+                  [ 78,    320 ],
+                  [ 21,    123 ]
+                ];
+
+
+    const w = 500;
+    const h = 500;
+
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+    svg.selectAll("circle")
+       .data(dataset)
+       .enter()
+       .append("circle")
+       // Add your code below this line
+
+      .attr('cx',(d) => d[0])
+      .attr('cy',(d) => h - d[1])
+      .attr('r',5)
+
+
+       // Add your code above this line
+
+  </script>
+</body>

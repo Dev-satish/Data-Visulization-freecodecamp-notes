@@ -1,0 +1,52 @@
+Task 7
+
+
+# Add Classes With D3
+
+Styling a lot of elements seperatly becomes difficult even for small apps.
+
+It would really be great if we could add the classes directly and style them using various style properties.
+
+For this D3 has has attr() method.
+
+The attr() method works similar to style().
+
+It takes a comma seperated values and callback function.
+
+Now lets see how can we add a class of "container" to the attr() method.
+
+Ex: .attr("class","Container");
+
+Note: 
+
+The above "class" parameter will always remain same whenever we want to add the class to the attr() method.
+
+only the "container" will change with the name of the class you want to add.
+
+
+CHALLENGE SOLUTION:
+
+
+<style>
+  .bar {
+    width: 25px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+  }
+</style>
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    d3.select("body").selectAll("div")
+      .data(dataset)
+      .enter()
+      .append("div")
+      // Add your code below this line
+
+      .attr("class","bar");
+
+      // Add your code above this line
+  </script>
+</body>

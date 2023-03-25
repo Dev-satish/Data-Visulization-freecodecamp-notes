@@ -1,0 +1,32 @@
+Task 2
+
+
+SElECTING THE GROUP OF ELEMENTS WITH D3
+
+To select the group of elements in D3 we use selectAll() method.
+
+The selectAll() method returns an array of elements that matches the passed input string.
+
+Like select() method selectAll() method also supports the method chaining.
+
+
+we can use the selectAll() mathod to also change the content of the html node.
+
+
+SOLUTION OF THE CHALLENGE:
+
+<body>
+  <ul>
+    <li>Example</li>
+    <li>Example</li>
+    <li>Example</li>
+  </ul>
+  <script>
+    // Add your code below this line
+
+  d3.selectAll('li')
+    .text('list item')
+
+    // Add your code above this line
+  </script>
+</body>

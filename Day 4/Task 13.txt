@@ -1,0 +1,63 @@
+Task 13
+
+# Dynamically set the coordinates of each bar
+
+In the last challange we created a rectangle and appended it in an svg element.
+
+Unfortunately, they all stacked on top of each other.
+
+The placement of rectangle is controlled by the values if x and y.
+
+they tell D3 to start draw the drawing the shape in the svg area.
+
+the last challenge as the coordinates has been set to 0, the bar was placed in the upper-left corner.
+
+Now to set all the bars aligned we have to set the value of y at 0, and the value of x will change when we add new bar.
+
+As we incrase the value the of x the bars will shift to right.
+
+The attr() mathod accepts a callback function to dynamically set the attribute brom any data.
+
+This call back function takes 2 arguments, one for the data point itself ( usually d ) and other for the index of the data point.
+
+syntex : .attr("property",(d,i) => {...} )
+
+Note : Do not use any kind of a loop or anything to iterate over each values of the dataset, recall the data() method does that work automatically.
+
+now to add space between the bars we have to add return i * 30, in order to set the  value of x to 30.
+
+
+CHALLENGE SOLUTION:
+
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    const w = 500;
+    const h = 100;
+
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+    svg.selectAll("rect")
+       .data(dataset)
+       .enter()
+       .append("rect")
+       .attr("x", (d, i) => {
+         // Add your code below this line
+
+        return i * 30
+
+         // Add your code above this line
+       })
+       .attr("y", 0)
+       .attr("width", 25)
+       .attr("height", 100);
+  </script>
+</body>
+
+
+
+By: Satish Mishra

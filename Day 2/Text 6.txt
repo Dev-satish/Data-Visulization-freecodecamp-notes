@@ -1,0 +1,45 @@
+Text 6
+
+# Change styles based on data
+
+
+D3 is about visualization and presentation of data.
+
+It's likely you'll want to change the styling of elements based on the data. 
+
+For example, you may want to color a data point blue if it has a value less than 20, and red otherwise. 
+
+You can use a callback function in the style() method and include the conditional logic. The callback function uses the d parameter to represent the data point:
+
+Ex: selection.style("color", (d) => {Logic});
+
+We can also use other CSS properties in the style() method.
+
+
+CHALLENGE SOLUTION: 
+
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    d3.select("body").selectAll("h2")
+      .data(dataset)
+      .enter()
+      .append("h2")
+      .text((d) => (d + " USD"))
+      // Add your code below this line
+
+      .style('color', (h2) =>{ 
+      if(h2>20)
+      {
+        return "green"
+      }
+        else
+        {
+          return "red"
+        }
+        });
+
+      // Add your code above this line
+  </script>
+</body>

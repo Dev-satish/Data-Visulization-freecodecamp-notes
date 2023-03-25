@@ -1,0 +1,48 @@
+Task 4 
+
+# work with Dynamic data in D3
+
+In the last 3 challenges we worked with displaying the data dynamically using data() and enter() methods.
+
+the data() and enter() methods take the data set and, create a new DOM element for each entry in the data set.
+
+These methods take a data set and, together with the append() method, create a new DOM element for each entry in the data set.
+
+
+now what if you want to display the elements of the dataset ?
+
+to do so, you have to just know that the .text() method also takes an argumet taht can display the elements in the dataset.
+
+Ex: .text((h2) => h2);
+
+In the above example he text method takes and argument h2 and using => (arrow) it refers the value bound with h2.
+
+
+now we can also add text to the element, to do so you just have to use concatination property of D3.
+
+
+Ex: .text((h2) => h2 + " USD");
+
+
+CHALLENGE SOLUTION:
+
+
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    d3.select("body").selectAll("h2")
+      .data(dataset)
+      .enter()
+      .append("h2")
+      // Add your code below this line
+
+      .text((h2) => h2 +" USD" )
+      // .text(h2))
+
+      // Add your code above this line
+  </script>
+</body>
+
+
+By: Satish Mishra

@@ -1,0 +1,37 @@
+Task 8
+
+# Update the height of an element dynamically
+
+previously we studied about how to fetch and manupulate the data in array and to add the classes and style the data dynamically.
+
+now we will combine the previous tasks and create a bar chart.
+
+In this task we have to add an array of elements of as the height of bar charts.
+
+CHALLENGE SOLUTION:
+
+<style>
+  .bar {
+    width: 25px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+  }
+</style>
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    d3.select("body").selectAll("div")
+      .data(dataset)
+      .enter()
+      .append("div")
+      .attr("class", "bar")
+      // Add your code below this line
+      .style('height', (div) => div);
+
+      // Add your code above this line
+  </script>
+</body>
+
+By: Satish Mishra

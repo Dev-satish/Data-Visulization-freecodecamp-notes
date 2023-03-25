@@ -1,0 +1,51 @@
+Task 10 
+
+# learn about SVG's in D3
+
+SVG stands for Scalable Vector Grpahics 
+
+Here scalable means that if we zoom in the vector image, it wont appear pixelated, i enlarges with the display system weather it is a small mobile screen or a large TV display.
+
+SVG's are used to make common vector images ( shapes ).
+
+As we work with data representation in D3 we use SVG's a lot.
+
+To create an SVG on a webpage the link and the SVG details must go in the " <svg> ... </svg> ".
+
+
+Even when we use css properties like "vw" or "vh" or "percentage" css can also become scalable.
+
+But in data visulization SVG's are more preffered and using them is concidered as a good practice.
+
+
+In this challenge we have to append the svg node and also we have to set the height, width and margin of the svg node.
+
+
+CHALLENGE SOLUTION:
+
+<style>
+  svg {
+    background-color: pink;
+  }
+</style>
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    const w = 500;
+    const h = 100;
+
+    const svg = d3.select("body")
+                  // Add your code below this line
+
+                  .append('svg')
+                  .attr('width',w)
+                  .attr('height',h);
+
+                  // Add your code above this line
+  </script>
+</body>
+
+
+By: Satish Mishra
+

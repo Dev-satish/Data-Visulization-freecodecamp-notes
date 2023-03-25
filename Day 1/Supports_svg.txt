@@ -1,0 +1,37 @@
+What are Svgs.
+
+Svgs are vector images.
+
+The images that are scalable ( Zoomable ) Without affecting the quality of the image.
+
+These are high quality images which are easily editable.
+
+No other image formats are this much scalable, other file formats loose quality at the time of there scaling.
+
+Svg is an XML file Format. 
+
+These file formats are good for printing and professional use.
+
+SVG image are always in Pure XML format which can be easily handleable using HTML and CSS.
+
+This file is an easily compressible file format.
+
+Now to edit this image format in HTML we have 2 ways:
+
+1) < img src="filename.svg", width="200" height="200" />
+
+2) there is a new tag introduced in HTML5 known as svg tag.
+	
+	<svg width="100" height="100">
+		<circle cx="50" cy="50" stroke="Green" stroke-width="4"/>
+
+	similarly we can draw various shapes like square, rectangle, trangle etc.
+
+	</svg>
+
+"Use www.flaticon.com for download SVG's and use it free on your website "
+
+Do not use svg's for multicolour photos, it is best for logo's and graphic work.
+
+
+By: Satish Mishra             

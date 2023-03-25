@@ -1,0 +1,49 @@
+Task 1
+
+
+ADDING DOCUMENTS ELEMENTS WITH D3 ( Data Driven Documents )
+
+D3 has several methods that lets you add and change elements in your documents.
+
+So there is a method that selects one element from the documents, the name of the method is "Select()".
+
+The select() method takes an agrument "name" and returns the html node for the first element in the document that matches the name.
+
+
+To find an element or an html node in the document we use " const anchor = d3.select("satish"); ".
+
+now, in the above element of code "const" is a datatype, whereas "Anchor" is a veriable that stores the html node from the document. 
+
+D3 is the part of the code that is used to access the D3 library and it's methods.
+
+
+
+
+There are 2 more methods in the D3 library:
+
+1) append();
+2) text();
+
+The append() method takes an argument that adds the element into the document selected.
+
+The text() method is used to select the current text in the HTML node.
+
+Example: 
+
+		d3.select("Name of the main tag that you want to select.")
+  		  .append(" Name the tag where you want to append the data ")
+  		  .text("Enter the text that you want to add");
+
+with d3 we can chain several methods togather in a row.
+
+
+
+TASK 1 SOLUTION:
+
+		
+		D3.select("body")
+		  .apppend("h1")
+		  .text("Learning D3");
+
+
+By: Satish Mishra

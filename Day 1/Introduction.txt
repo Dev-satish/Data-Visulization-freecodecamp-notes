@@ -1,0 +1,24 @@
+Data : Data is a collection of raw facts and figures.
+
+data is everywhere around us, but without any shape or context it dosen't mean much.
+
+In data visulization we create graphs, charts and maps to present different types of data using D3.js library.
+
+we'll also learn about JSON( Javascript Object Notation ), and how to work with data online using an API ( Application Programming Interface ).
+
+
+DATA VISULIZATION WITH D3
+
+D3 or D3.js stands for " data driven Documents ".
+
+D3 is used for creating a dynamic and interactive data visulizations in web browser.
+
+D3 is build to work with basic web technologies like HTML, CSS, and SVG's.
+
+SVG stands for Scalable vector graphics.
+( For more information, refer Supports_svg file. ).
+
+D3 uses many different data formats, and by using its different powerfull methods we can transform the data into various graphs, charts, and graphics.
+
+In data visulizations we create graphs, charts, maps etc from data, its basically a method or a way of transforming the raw data into a meaningfull data.
+

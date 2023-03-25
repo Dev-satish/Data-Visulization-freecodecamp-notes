@@ -1,0 +1,45 @@
+Task 3
+
+
+# Working with data in D3 ( Data Driven Documents ).
+
+
+The D3 library focuses on the Data Driven Approach.
+
+In this task an array of numbers is used.
+
+
+In D3 the " data()" method is used to make the D3 library aware about the data in the document.
+
+The data() method used on a selection of DOM elements to attach data to those elements.
+
+the dataset is passed as an argument in the Data() method.
+
+To create a new element for each data in the dataset D3 has enter() method.
+
+When enter() is combined with the data() method, it looks at the selected elements from the page and compares them to the number of data items in the set. If there are fewer elements than data items, it creates the missing elements.
+
+CHALLENGE SOLUTION:
+
+<body>
+  <script>
+    const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+    // Add your code below this line
+
+      d3.select('body').selectAll('h2')
+        .data(dataset)
+        .enter()
+        .append('h2')
+        .text('New Title')
+
+    // Add your code above this line
+
+  </script>
+</body>
+
+
+Here in the above code there is a dataset created named as dataset which has 9 elements inside, now in the code i've first called D3 library in which i've used select() method to select the main html node then in that i've used selectAll() method to select all the elements in h1 ( which is an abstract existence right now), then using data() method i've passed the dataset to the method npw using enter() method we looped the flow in the elements of the dataset and using append() and text() methods we added "New title" at the place of each elements in the dataset.
+
+
+By: Satish Mishra
